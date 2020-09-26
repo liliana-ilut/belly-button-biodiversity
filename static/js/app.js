@@ -3,8 +3,18 @@ function buildMetadata(sample){
     d3.json("samples.json").then((data) => {
         let metadata = data.metadata; 
         // console.log(data) // 
+});
 
-}
+let resultArray = metadata.filter(sampleObject => sampleObject.id ==sample);
+let result = resultArray[0];
+let PANEL = d3.select("sample-metadata");
+PANEL.html("");
+
+Object.entires(result).forEach(([key, value])=> {
+    PANEL
+        .append("h6")
+        .text(`${key.toUpperCase()}: ${value}`);
+});
 // create a bar chart
 function buildCharts(sample) {
 d3.json("samples.json").then((data) => {
@@ -20,6 +30,10 @@ d3.json("samples.json").then((data) => {
       console.log(otuIds);
       console.log(otuLabels);
       console.log(sampleIds);
+
+      let resultArray= sample.filter(sampleObject => sampleObject.id ==sample);
+      let reuslt = resultArray[0];
+      
     
       let yticks = otuIds.slice(0, 10).map(otuIds => `OTU ${otuIds}`).reverse();
       let barData = [
@@ -89,6 +103,6 @@ function optionChanged(newSample) {
     // Fetch new data each time a new sample is selected
     buildCharts(newSample);
     buildMetadata(newSample);
-  }
+  };
 
-init();
+// init();//
