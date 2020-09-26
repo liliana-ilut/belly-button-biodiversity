@@ -36,6 +36,7 @@ d3.json("samples.json").then((data) => {
       };
   
       Plotly.newPlot("bar", barData, barLayout);
+
    // create a bubble chart   
         let bubbleLayout = {
         title: "Bacteria Cultures Per Sample",
@@ -61,3 +62,13 @@ d3.json("samples.json").then((data) => {
   Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
     });
+
+function init(){
+    // refereance to the dropwdown select element 
+    let choose = d3.select("#selDataset");
+
+    d3.json("samples.json").then((data) => {
+    let sampleNames = data.names;
+
+    
+}
