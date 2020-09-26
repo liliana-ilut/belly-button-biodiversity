@@ -18,6 +18,25 @@ d3.json("samples.json").then((data) => {
       console.log(otuIds);
       console.log(otuLabels);
       console.log(sampleIds);
-
+    
+      let yticks = otuIds.slice(0, 10).map(otuIds => `OTU ${otuIds}`).reverse();
+      let barData = [
+        {
+          y: yticks,
+          x: sampleValues.slice(0, 10).reverse(),
+          text: otuLabels.slice(0, 10).reverse(),
+          type: "bar",
+          orientation: "h",
+        }
+      ];
+  
+      let barLayout = {
+        title: "Top 10 Bacteria Cultures Found",
+        margin: { t: 30, l: 150 }
+      };
+  
+      Plotly.newPlot("bar", barData, barLayout);
+   
+  
 
     });
