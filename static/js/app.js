@@ -1,10 +1,12 @@
-// 
-// d3.json("samples.json").then((data) => {
-//     let metadata = data.metadata;
-//       console.log(data) // 
-//     });
 
+function buildMetadata(sample){
+    d3.json("samples.json").then((data) => {
+        let metadata = data.metadata; 
+        // console.log(data) // 
+
+}
 // create a bar chart
+function buildCharts(sample) {
 d3.json("samples.json").then((data) => {
     let samples = data.samples;
     //   console.log(samples) 
@@ -62,7 +64,7 @@ d3.json("samples.json").then((data) => {
   Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
     });
-
+};
 function init(){
     // refereance to the dropwdown select element 
     let choose = d3.select("#selDataset");
@@ -70,5 +72,23 @@ function init(){
     d3.json("samples.json").then((data) => {
     let sampleNames = data.names;
 
-    
-}
+    sampleNames.forEach((sample)=> {
+        choose
+            .append("option")
+            .text(sample)
+            .property("value", sample);
+
+    let firstSample = sampleNames[0];
+    buildChart(firstSample);
+    buildMetadata(firstSample);
+    });
+});
+
+};
+function optionChanged(newSample) {
+    // Fetch new data each time a new sample is selected
+    buildCharts(newSample);
+    buildMetadata(newSample);
+  }
+
+init();
