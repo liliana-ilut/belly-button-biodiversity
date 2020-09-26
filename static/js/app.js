@@ -31,12 +31,33 @@ d3.json("samples.json").then((data) => {
       ];
   
       let barLayout = {
-        title: "Top 10 Bacteria Cultures Found",
+        title: "Top 10 Bacteria Cultures",
         margin: { t: 30, l: 150 }
       };
   
       Plotly.newPlot("bar", barData, barLayout);
-   
-  
+   // create a bubble chart   
+        let bubbleLayout = {
+        title: "Bacteria Cultures Per Sample",
+        margin: { t: 0 },
+        hovermode: "closest",
+        xaxis: { title: "OTU ID" },
+        margin: { t: 30}
+  };
+        let bubbleData = [
+    {
+      x: otuIds,
+      y: sampleValues,
+      text: otuLabels,
+      mode: "markers",
+      marker: {
+        size: sampleValues,
+        color: otuIds,
+        colorscale: "Earth"
+      }
+    }
+  ];
+
+  Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
     });
