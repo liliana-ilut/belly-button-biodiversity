@@ -4,7 +4,7 @@ function createMetadata(sample) {
     d3.json("../docs/samples.json").then((data) => {
     let metadata = data.metadata;
     // console.log(metadata); 
-    
+
     // filter results of the desire items
     let resultMetadata = metadata.filter(sampleItem => sampleItem.id == sample);
     let result= resultMetadata[0];
@@ -59,6 +59,12 @@ function createCharts(sample) {
             x: sampleValues.slice(0,10).reverse(),
             text: otuLabels.slice(0,10).reverse(),
             type: "bar",
+            marker: {
+                color: "rgba(220, 64, 82, 0.7)",
+                line: {
+                    color: 'rgba(220, 64, 82, 1.0)',
+                    width: 3}
+            },
             orientation: "h"
         }
     ];
