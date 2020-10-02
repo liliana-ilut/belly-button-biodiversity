@@ -2,7 +2,19 @@ body{
     background-color: #d0dff5; 
 
   }
+.container{
+  background-image: url(bacteria.jpg);
+  /* background-size: cover; */
+  /* display:inline-block; */
+}
+.col-md-2{
+  color: #84c547;
+  background-color:rgb(132, 93, 187);
+}
+.col-md-12{
+  background-color: rgb(132, 93, 187);
 
+}
 /* h1{
     color: #559cc5;
     font-family: Arial, Helvetica, sans-serif;
