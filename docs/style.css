@@ -4,8 +4,7 @@ body{
   }
 .container{
   background-image: url(bacteria.jpg);
-  /* background-size: cover; */
-  /* display:inline-block; */
+  
 }
 .col-md-2{
   color: #84c547;
@@ -15,23 +14,21 @@ body{
   background-color: rgb(132, 93, 187);
 
 }
-/* h1{
-    color: #559cc5;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 300%;
-  }
-p{
-    color: #559cc5;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px; 
-    }
-h5{
-  color: #559cc5;
-  font-family: Arial Bold, Helvetica, sans-serif;
-  font-size: 17px; 
-  }
-h3{
-  color: #559cc5;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 17px; 
-} */
+.well{
+  border-color: rgb(132, 93, 187);
+  background-color: rgba(132, 93, 187,1);
+
+}
+.panel-primary {
+  border-color: rgb(132, 93, 187);
+  background-color: rgba(132, 93, 187,1);
+}
+.panel-title{
+  color: rgb(230, 255, 204);
+  /* background-color: rgb(132, 93, 187); */
+};
+.panel-heading {
+  background-color: rgb(132, 93, 187);
+  border-color: rgb(132, 93, 187);
+  border-bottom-color: rgb(132, 93, 187)
+}

@@ -30,7 +30,7 @@ function createCharts(sample) {
     let otuLabels= result.otu_labels;
     let sampleValues= result.sample_values;
 
-    // Bublle Chart
+    // Bubble Chart
     let bubbleLayout= {
         title: "Bacteria per culture",
         margin: {t:0},
