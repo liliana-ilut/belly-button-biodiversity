@@ -60,9 +60,9 @@ function createCharts(sample) {
             text: otuLabels.slice(0,10).reverse(),
             type: "bar",
             marker: {
-                color: "rgba(220, 64, 82, 0.7)",
+                color: "rgba(17, 157, 255,0.5)",
                 line: {
-                    color: 'rgba(220, 64, 82, 1.0)',
+                    color: 'rgba(16, 157, 255,1)',
                     width: 3}
             },
             orientation: "h"
