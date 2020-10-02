@@ -35,7 +35,7 @@ function createCharts(sample) {
         title: "Bacteria per culture",
         margin: {t:0},
         hovermode: "closest",
-        xaxis: {title: "OTU ID"},
+        xaxis: {title: "OTU IDs"},
         margin: {t:30}
     };
     let bubbleData= [{
@@ -69,7 +69,7 @@ function createCharts(sample) {
         }
     ];
     let barLayout= {
-        title : "top 10",
+        title : "Top ten OTUs found",
         margin: {t:30, l:150}
     };
     // plot the new bar chart
