@@ -1,34 +1,28 @@
 body{
-    background-color: rgb(230, 255, 204); 
+    background-color: rgb(247, 241, 241); 
 
   }
 .container{
-  background-image: url(bacteria.jpg);
+  background-image: url(../images/bacteria.jpg);
   
 }
 .col-md-2{
-  color: #84c547;
-  background-color:rgb(132, 93, 187);
+  color: black;
+  background-color:rgba(153, 0, 204,0.5);
 }
 .col-md-12{
-  background-color: rgb(132, 93, 187);
+  background-color: rgba(153, 0, 204,0.5);
 
 }
 .well{
-  border-color: rgb(132, 93, 187);
-  background-color: rgba(132, 93, 187,1);
+  border-color: rgba(153, 0, 204,0.5);
+  background-color: rgba(153, 0, 204,0.5);
 
 }
-.panel-primary {
-  border-color: rgb(132, 93, 187);
-  background-color: rgba(132, 93, 187,1);
+.panel.panel-primary {
+  border-color: rgba(153, 0, 204,0.5);
+  background-color: rgba(153, 0, 204,0.5);
 }
 .panel-title{
-  color: rgb(230, 255, 204);
-  /* background-color: rgb(132, 93, 187); */
+  color: black;
 };
-.panel-heading {
-  background-color: rgb(132, 93, 187);
-  border-color: rgb(132, 93, 187);
-  border-bottom-color: rgb(132, 93, 187)
-}
