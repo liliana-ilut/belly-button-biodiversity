@@ -18,7 +18,7 @@ function createMetadata(sample) {
     });
 });
 };
-
+// create a function that will create charts
 function createCharts(sample) {
     d3.json("../docs/samples.json").then((data) => {
     let samples= data.samples;
@@ -49,9 +49,9 @@ function createCharts(sample) {
             colorscale: "Earth"
         }
     }];
-
+    // plot the new bubble chart
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
-
+    // create the bar chart
     let yticks = otuIds.slice(0,10).map(otuIds=> `OTU ${otuIds}`).reverse();
     let barData = [ 
         {
@@ -60,9 +60,9 @@ function createCharts(sample) {
             text: otuLabels.slice(0,10).reverse(),
             type: "bar",
             marker: {
-                color: "rgba(17, 157, 255,0.5)",
+                color: "rgba(153, 0, 204,0.5)",
                 line: {
-                    color: 'rgba(16, 157, 255,1)',
+                    color: "rgba(153, 255, 102,1)",
                     width: 3}
             },
             orientation: "h"
@@ -72,12 +72,12 @@ function createCharts(sample) {
         title : "top 10",
         margin: {t:30, l:150}
     };
-
+    // plot the new bar chart
     Plotly.newPlot("bar", barData, barLayout);
 
     });
 };
-
+// create a funtion that will tie together the other functions we created above 
 function init() {
     let choose= d3.select("#selDataset");
     d3.json("../docs/samples.json").then((data) => {
