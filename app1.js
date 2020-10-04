@@ -1,7 +1,7 @@
 // create a funtion that will read the metadata 
 function createMetadata(sample) {
     // read the json file and console log to make sure it works
-    d3.json("../docs/samples.json").then((data) => {
+    d3.json("samples.json").then((data) => {
     let metadata = data.metadata;
     // console.log(metadata); 
 
@@ -20,7 +20,7 @@ function createMetadata(sample) {
 };
 // create a function that will create charts
 function createCharts(sample) {
-    d3.json("../docs/samples.json").then((data) => {
+    d3.json("samples.json").then((data) => {
     let samples= data.samples;
 
     let resultSamples = samples.filter(sampleItem => sampleItem.id == sample);
@@ -80,7 +80,7 @@ function createCharts(sample) {
 // create a funtion that will tie together the other functions we created above 
 function init() {
     let choose= d3.select("#selDataset");
-    d3.json("../docs/samples.json").then((data) => {
+    d3.json("samples.json").then((data) => {
         let sampleNames= data.names;
 
         sampleNames.forEach((sample) => {
